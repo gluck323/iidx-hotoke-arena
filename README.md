@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# IIDX HOTOKE ARENA Season2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IIDX HOTOKE ARENA Season2の公式イベント告知サイトです。
 
-Currently, two official plugins are available:
+## イベント概要
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **開催日**: 2026年2月下旬予定
+- **会場**: イミグランデ日吉店
+- **参加人数**: 約40名
+- **形式**: 4台同時再生による音楽イベント
 
-## React Compiler
+## 技術スタック
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **フレームワーク**: React 18 + TypeScript
+- **ビルドツール**: Vite
+- **ルーティング**: React Router DOM
+- **スタイリング**: Tailwind CSS
+- **アニメーション**: Framer Motion
 
-## Expanding the ESLint configuration
+## 開発環境のセットアップ
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 必要な環境
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18以上
+- npm または yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### インストール
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run dev
+
+# ビルド
+npm run build
+
+# ビルドのプレビュー
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## デプロイ
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Vercelへのデプロイ（推奨）
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. [Vercel](https://vercel.com)にログイン
+2. GitHubリポジトリを接続
+3. プロジェクト設定:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. デプロイ実行
+
+### Netlifyへのデプロイ
+
+1. [Netlify](https://netlify.com)にログイン
+2. GitHubリポジトリを接続
+3. ビルド設定:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. デプロイ実行
+
+## ライセンス
+
+このプロジェクトは KBD IIDX HOTOKE ARENA製作委員会 によって管理されています。
+
+## お問い合わせ
+
+イベントに関するお問い合わせは、Webサイトの[お問い合わせフォーム](/contact)からお願いします。
