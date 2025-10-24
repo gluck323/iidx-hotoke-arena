@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-iidx-black text-white font-sans antialiased;
     margin: 0;
