@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  username      String    @unique
+  password      String
+  name          String?
+  rating        Int       @default(1500)
+  gamesPlayed   Int       @default(0)
+  gamesWon      Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // リレーション
+  battlesAsPlayer1  Battle[] @relation("Player1Battles")
+  battlesAsPlayer2  Battle[] @relation("Player2Battles")
+  wonBattles        Battle[] @relation("WinnerBattles")
+  sessions          Session[]
+  accounts          Account[]
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Song {
+  id          String   @id @default(cuid())
+  title       String
+  artist      String
+  difficulty  Int
+  level       Int
+  genre       String?
+  bpm         Int?
+  createdAt   DateTime @default(now())
+
+  battles Battle[]
+}
+
+model Battle {
+  id          String   @id @default(cuid())
+  player1Id   String
+  player2Id   String
+  songId      String
+  status      BattleStatus @default(WAITING)
+
+  player1Score Int?
+  player2Score Int?
+  winnerId     String?
+
+  scheduledAt  DateTime?
+  startedAt    DateTime?
+  finishedAt   DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // リレーション
+  player1 User @relation("Player1Battles", fields: [player1Id], references: [id])
+  player2 User @relation("Player2Battles", fields: [player2Id], references: [id])
+  winner  User? @relation("WinnerBattles", fields: [winnerId], references: [id])
+  song    Song @relation(fields: [songId], references: [id])
+}
+
+enum BattleStatus {
+  WAITING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  category  String
+  subject   String
+  message   String
+  status    ContactStatus @default(PENDING)
+  response  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum ContactStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}

@@ -1,53 +1,39 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../common/Container';
 import Button from '../common/Button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-iidx-black/80 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-iidx-black/80 backdrop-blur-md">
       <Container>
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <h1 className="text-2xl font-display font-bold text-gradient">
-              IIDX仏アリーナ
+              IIDX HOTOKE ARENA Season2
             </h1>
-            <span className="text-iidx-gold font-display text-sm">Season2</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('about')}
+            <Link
+              to="/about"
               className="text-white hover:text-iidx-blue transition-colors"
             >
               イベント概要
-            </button>
-            <button
-              onClick={() => scrollToSection('history')}
-              className="text-white hover:text-iidx-blue transition-colors"
-            >
-              起源
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            </Link>
+            <Link
+              to="/contact"
               className="text-white hover:text-iidx-blue transition-colors"
             >
               お問い合わせ
-            </button>
-            <Button size="sm" onClick={() => scrollToSection('contact')}>
-              参加申し込み
-            </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="sm">参加はこちら</Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -84,31 +70,25 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 space-y-4 border-t border-white/10">
-            <button
-              onClick={() => scrollToSection('about')}
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
               className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-2"
             >
               イベント概要
-            </button>
-            <button
-              onClick={() => scrollToSection('history')}
-              className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-2"
-            >
-              起源
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
               className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-2"
             >
               お問い合わせ
-            </button>
-            <Button
-              className="w-full"
-              size="sm"
-              onClick={() => scrollToSection('contact')}
-            >
-              参加申し込み
-            </Button>
+            </Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full" size="sm">
+                参加はこちら
+              </Button>
+            </Link>
           </nav>
         )}
       </Container>

@@ -18,7 +18,14 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-iidx-blue via-iidx-magenta to-iidx-gold bg-clip-text text-transparent;
+    background: linear-gradient(to right, #34495E, #4A6FA5, #B89968);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .glass-effect {
@@ -26,10 +33,10 @@
   }
 
   .glow-blue {
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    box-shadow: 0 0 20px rgba(74, 111, 165, 0.3);
   }
 
   .glow-magenta {
-    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+    box-shadow: 0 0 20px rgba(139, 90, 125, 0.3);
   }
 }

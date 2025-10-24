@@ -4,13 +4,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-iidx-gray-dark border-t border-white/10 py-12">
+    <footer className="bg-iidx-gray-dark border-t border-white/10 py-12 relative z-20">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
             <h3 className="text-xl font-display font-bold text-gradient mb-4">
-              IIDX仏アリーナ Season2
+              IIDX HOTOKE ARENA Season2
             </h3>
             <p className="text-iidx-text-gray text-sm">
               早稲田大学BBD × 慶應義塾大学KBM 合同イベント
@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#about"
+                  href="/about"
                   className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
                 >
                   イベント概要
@@ -34,15 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#history"
-                  className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
-                >
-                  起源
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
+                  href="/contact"
                   className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
                 >
                   お問い合わせ
