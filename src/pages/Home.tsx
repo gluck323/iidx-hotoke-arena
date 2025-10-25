@@ -155,6 +155,7 @@ export default function HomePage() {
             <div className="mb-2 sm:mb-3 md:mb-6 flex justify-center">
               <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
             </div>
+            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto mb-2 sm:mb-3 md:mb-12"></div>
 
             {/* イベント告知バナー */}
             <motion.div
@@ -172,7 +173,7 @@ export default function HomePage() {
               </p>
 
               {/* カウントダウン */}
-              <div className="grid grid-cols-4 gap-1.5 sm:gap-3 md:gap-4 max-w-2xl mx-auto mb-2.5 sm:mb-4 md:mb-6">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-3 md:gap-4 max-w-2xl mx-auto mb-2 sm:mb-3 md:mb-6">
                 {[
                   { value: countdown.days, label: '日' },
                   { value: countdown.hours, label: '時間' },
