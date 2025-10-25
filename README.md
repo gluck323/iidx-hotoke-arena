@@ -1,6 +1,6 @@
-# IIDX HOTOKE ARENA Season2
+# IIDX HOTOKE ARENA SEASON2
 
-IIDX HOTOKE ARENA Season2の公式イベント告知サイトです。
+IIDX HOTOKE ARENA SEASON2の公式イベント告知サイトです。
 
 ## イベント概要
 

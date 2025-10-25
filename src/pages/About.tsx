@@ -43,7 +43,7 @@ export default function AboutPage() {
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
               <p>
-                <strong className="text-iidx-blue">IIDX HOTOKE ARENA Season2</strong>は、beatmaniaIIDXプレイヤーが集まり、
+                <strong className="text-iidx-blue">IIDX HOTOKE ARENA SEASON2</strong>は、beatmaniaIIDXプレイヤーが集まり、
                 好きな曲を筐体の良い音響で流し合う音楽イベントです。
               </p>
               <p>

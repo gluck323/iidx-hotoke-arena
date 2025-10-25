@@ -156,7 +156,7 @@ export default function HomePage() {
               IIDX HOTOKE ARENA
             </h1>
             <p className="text-3xl md:text-4xl text-gray-300 mb-4 font-display font-bold tracking-wider">
-              Season 2
+              SEASON 2
             </p>
             <div className="w-48 h-2 bg-gradient-to-r from-classic-slate via-iidx-blue to-classic-slate mx-auto mb-12"></div>
 

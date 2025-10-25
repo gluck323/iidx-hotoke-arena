@@ -10,7 +10,7 @@ const Footer = () => {
           {/* About */}
           <div>
             <h3 className="text-xl font-display font-bold text-gradient mb-4">
-              IIDX HOTOKE ARENA Season2
+              IIDX HOTOKE ARENA SEASON2
             </h3>
             <p className="text-iidx-text-gray text-sm">
               早稲田大学BBD × 慶應義塾大学KBM 合同イベント
