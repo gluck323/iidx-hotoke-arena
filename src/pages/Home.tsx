@@ -194,27 +194,6 @@ export default function HomePage() {
                 参加はこちら
               </Link>
             </motion.div>
-
-            {/* ナビゲーションボタン */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
-            >
-              <Link
-                to="/about"
-                className="bg-black/40 border border-iidx-red/60 hover:border-iidx-red text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-iidx-red/30 text-sm sm:text-base"
-              >
-                イベント概要
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-black/40 border border-iidx-red/60 hover:border-iidx-red text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-iidx-red/30 text-sm sm:text-base"
-              >
-                お問い合わせ
-              </Link>
-            </motion.div>
           </motion.div>
         </div>
 
