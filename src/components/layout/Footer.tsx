@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from '../common/Container';
 
 const Footer = () => {
@@ -25,20 +26,20 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">リンク</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="text-iidx-text-gray hover:text-iidx-red transition-colors"
                 >
                   イベント概要
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="text-iidx-text-gray hover:text-iidx-red transition-colors"
                 >
                   お問い合わせ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
