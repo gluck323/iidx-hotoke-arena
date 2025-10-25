@@ -143,44 +143,43 @@ export default function HomePage() {
       </div>
 
       {/* ヒーローセクション */}
-      <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-12 sm:pt-16 md:pt-0">
+      <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-8 sm:pt-12 md:pt-0">
 
-        <div className="container mx-auto px-3 py-2 md:py-16 relative z-10">
+        <div className="container mx-auto px-3 py-0 md:py-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="mb-1 sm:mb-2 md:mb-6 flex justify-center">
+            <div className="mb-2 sm:mb-3 md:mb-6 flex justify-center">
               <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
             </div>
-            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto mb-3 sm:mb-4 md:mb-12"></div>
 
             {/* イベント告知バナー */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="bg-black/80 backdrop-blur-sm border-2 border-iidx-red/60 rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-8 mb-6 md:mb-12 max-w-4xl mx-auto"
+              className="bg-black/80 backdrop-blur-sm border-2 border-iidx-red/60 rounded-lg md:rounded-2xl p-3 sm:p-5 md:p-8 mb-0 md:mb-12 max-w-4xl mx-auto"
             >
-              <div className="text-white text-xs sm:text-sm font-bold mb-1 sm:mb-2">次回開催予定</div>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
+              <div className="text-white text-[11px] sm:text-sm font-bold mb-1 sm:mb-2">次回開催予定</div>
+              <h2 className="text-lg sm:text-2xl md:text-4xl font-bold text-white mb-1.5 sm:mb-3 md:mb-4">
                 2026年2月下旬
               </h2>
-              <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-3 sm:mb-4 md:mb-6">
+              <p className="text-[11px] sm:text-sm md:text-base text-gray-300 mb-2.5 sm:mb-4 md:mb-6">
                 詳細日時は未定 | 参加希望アンケート受付中
               </p>
 
               {/* カウントダウン */}
-              <div className="grid grid-cols-4 gap-1.5 sm:gap-3 md:gap-4 max-w-2xl mx-auto mb-3 sm:mb-4 md:mb-6">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-3 md:gap-4 max-w-2xl mx-auto mb-2.5 sm:mb-4 md:mb-6">
                 {[
                   { value: countdown.days, label: '日' },
                   { value: countdown.hours, label: '時間' },
                   { value: countdown.minutes, label: '分' },
                   { value: countdown.seconds, label: '秒' },
                 ].map((item, index) => (
-                  <div key={index} className="bg-black/50 rounded-lg sm:rounded-xl p-1.5 sm:p-3 md:p-4 border border-white/20">
+                  <div key={index} className="bg-black/50 rounded-md sm:rounded-xl p-2 sm:p-3 md:p-4 border border-white/20">
                     <div className="text-xl sm:text-2xl md:text-4xl font-bold text-white">{item.value}</div>
                     <div className="text-[10px] sm:text-xs md:text-sm text-gray-400">{item.label}</div>
                   </div>
@@ -189,7 +188,7 @@ export default function HomePage() {
 
               <Link
                 to="/contact"
-                className="inline-block bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red text-white font-bold py-2.5 sm:py-3 md:py-5 px-6 sm:px-8 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-sm sm:text-base md:text-xl border-2 border-iidx-red/50 hover:border-iidx-red animate-pulse hover:animate-none"
+                className="inline-block bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red text-white font-bold py-2 sm:py-3 md:py-5 px-6 sm:px-8 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-sm sm:text-base md:text-xl border-2 border-iidx-red/50 hover:border-iidx-red animate-pulse hover:animate-none"
               >
                 参加はこちら
               </Link>
