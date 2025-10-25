@@ -77,7 +77,7 @@ const Footer = () => {
             &copy; {currentYear} KBD (BBD × KBM). All rights reserved.
           </p>
           <p className="text-iidx-text-gray text-xs mt-2">
-            beatmania IIDX は株式会社コナミデジタルエンタテインメントの登録商標です
+            beatmania IIDX はKonami Arcade Gamesの登録商標です
           </p>
         </div>
       </Container>
