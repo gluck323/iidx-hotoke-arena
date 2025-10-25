@@ -143,7 +143,7 @@ export default function HomePage() {
       </div>
 
       {/* ヒーローセクション */}
-      <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-8 sm:pt-12 md:pt-0">
+      <section className="relative md:min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-8 sm:pt-12 md:pt-0 pb-8 md:pb-0">
 
         <div className="container mx-auto px-3 py-0 md:py-16 relative z-10">
           <motion.div
@@ -152,10 +152,10 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="mb-3 sm:mb-4 md:mb-6 flex justify-center">
+            <div className="mb-4 sm:mb-5 md:mb-6 flex justify-center">
               <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
             </div>
-            <div className="w-40 sm:w-48 h-0.5 sm:h-1 md:h-2 bg-gradient-to-r from-transparent via-iidx-red to-transparent mx-auto mb-3 sm:mb-4 md:mb-12 opacity-80"></div>
+            <div className="w-40 sm:w-48 h-0.5 sm:h-1 md:h-2 bg-gradient-to-r from-transparent via-iidx-red to-transparent mx-auto mb-4 sm:mb-5 md:mb-12 opacity-80"></div>
 
             {/* イベント告知バナー */}
             <motion.div
