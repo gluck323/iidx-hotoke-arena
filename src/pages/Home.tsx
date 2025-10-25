@@ -152,47 +152,47 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 text-gradient">
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-4 md:mb-6 text-gradient leading-tight">
               IIDX HOTOKE ARENA
             </h1>
-            <p className="text-3xl md:text-4xl text-gray-300 mb-4 font-display font-bold tracking-wider">
+            <p className="text-2xl sm:text-3xl md:text-4xl text-gray-300 mb-4 font-display font-bold tracking-wider">
               SEASON 2
             </p>
-            <div className="w-48 h-2 bg-gradient-to-r from-classic-slate via-iidx-blue to-classic-slate mx-auto mb-12"></div>
+            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-classic-slate via-iidx-blue to-classic-slate mx-auto mb-8 md:mb-12"></div>
 
             {/* イベント告知バナー */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="bg-gradient-to-r from-classic-brown/20 to-iidx-gold/20 backdrop-blur-sm border-2 border-iidx-gold/40 rounded-2xl p-8 mb-12 max-w-4xl mx-auto"
+              className="bg-gradient-to-r from-classic-brown/20 to-iidx-gold/20 backdrop-blur-sm border-2 border-iidx-gold/40 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 md:mb-12 max-w-4xl mx-auto"
             >
-              <div className="text-iidx-gold text-sm font-bold mb-2">次回開催予定</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <div className="text-iidx-gold text-xs sm:text-sm font-bold mb-2">次回開催予定</div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">
                 2026年2月下旬
               </h2>
-              <p className="text-gray-300 mb-6">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6">
                 詳細日時は未定 | 参加希望アンケート受付中
               </p>
 
               {/* カウントダウン */}
-              <div className="grid grid-cols-4 gap-4 max-w-2xl mx-auto mb-6">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto mb-4 sm:mb-6">
                 {[
                   { value: countdown.days, label: '日' },
                   { value: countdown.hours, label: '時間' },
                   { value: countdown.minutes, label: '分' },
                   { value: countdown.seconds, label: '秒' },
                 ].map((item, index) => (
-                  <div key={index} className="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
-                    <div className="text-4xl font-bold text-iidx-gold">{item.value}</div>
-                    <div className="text-sm text-gray-400">{item.label}</div>
+                  <div key={index} className="bg-gray-900/50 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-gray-700">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-iidx-gold">{item.value}</div>
+                    <div className="text-xs sm:text-sm text-gray-400">{item.label}</div>
                   </div>
                 ))}
               </div>
 
               <Link
                 to="/contact"
-                className="inline-block bg-gradient-to-r from-iidx-gold to-classic-brown hover:from-iidx-gold/90 hover:to-classic-brown/90 text-white font-bold py-5 px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-xl border-2 border-iidx-gold/50 hover:border-iidx-gold animate-pulse hover:animate-none"
+                className="inline-block bg-gradient-to-r from-iidx-gold to-classic-brown hover:from-iidx-gold/90 hover:to-classic-brown/90 text-white font-bold py-3 sm:py-4 md:py-5 px-8 sm:px-10 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-base sm:text-lg md:text-xl border-2 border-iidx-gold/50 hover:border-iidx-gold animate-pulse hover:animate-none"
               >
                 参加はこちら
               </Link>
@@ -203,17 +203,17 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
             >
               <Link
                 to="/about"
-                className="bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base"
               >
                 イベント概要
               </Link>
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-classic-navy to-iidx-magenta hover:from-classic-navy/80 hover:to-iidx-magenta/80 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-classic-navy to-iidx-magenta hover:from-classic-navy/80 hover:to-iidx-magenta/80 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base"
               >
                 お問い合わせ
               </Link>
@@ -245,22 +245,22 @@ export default function HomePage() {
       </section>
 
       {/* イベント詳細情報セクション */}
-      <section className="py-20 relative">
+      <section className="py-12 sm:py-16 md:py-20 relative">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               イベント詳細
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-classic-slate to-iidx-blue mx-auto"></div>
+            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-classic-slate to-iidx-blue mx-auto"></div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
             {[
               {
                 icon: (
@@ -350,12 +350,12 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border ${item.borderColor} hover:border-opacity-50 transition-all`}
+                className={`bg-gray-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border ${item.borderColor} hover:border-opacity-50 transition-all`}
               >
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-xl text-gray-300 mb-2">{item.description}</p>
-                <p className="text-gray-400">{item.detail}</p>
+                <div className="mb-3 sm:mb-4">{item.icon}</div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-2">{item.description}</p>
+                <p className="text-sm sm:text-base text-gray-400">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -366,17 +366,17 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-classic-navy/30 to-iidx-blue/20 backdrop-blur-sm rounded-2xl p-8 border border-iidx-blue/30 text-center"
+            className="bg-gradient-to-br from-classic-navy/30 to-iidx-blue/20 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-iidx-blue/30 text-center"
           >
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               主催情報
             </h3>
             <div className="text-gray-300 space-y-2">
-              <p className="text-lg">
+              <p className="text-sm sm:text-base md:text-lg">
                 <span className="text-iidx-blue font-bold">主催：</span>
                 KBD IIDX HOTOKE ARENA製作委員会
               </p>
-              <p className="text-lg">
+              <p className="text-sm sm:text-base md:text-lg">
                 <span className="text-iidx-magenta font-bold">企画・原案：</span>
                 みりん
               </p>
@@ -386,7 +386,7 @@ export default function HomePage() {
       </section>
 
       {/* CTAセクション */}
-      <section className="py-20 relative">
+      <section className="py-12 sm:py-16 md:py-20 relative">
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -394,24 +394,24 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8">
               全身で多幸感を享受しよう
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
               好きな曲を筐体の良い音響で流し合う、
               <br />
               Awesomeイベントに参加しませんか？
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <Link
                 to="/about"
-                className="inline-block bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg"
+                className="inline-block bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base md:text-lg"
               >
                 イベント概要を見る
               </Link>
               <Link
                 to="/contact"
-                className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105"
+                className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 text-sm sm:text-base md:text-lg"
               >
                 お問い合わせ
               </Link>
