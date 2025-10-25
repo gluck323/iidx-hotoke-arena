@@ -30,6 +30,10 @@ IIDX HOTOKE ARENA SEASON2の公式イベント告知サイトです。
 # 依存関係のインストール
 npm install
 
+# 環境変数の設定
+cp .env.example .env
+# .env ファイルを編集してDiscord Webhook URLを設定
+
 # 開発サーバーの起動
 npm run dev
 
@@ -39,6 +43,32 @@ npm run build
 # ビルドのプレビュー
 npm run preview
 ```
+
+### Discord Webhook の設定
+
+お問い合わせフォームからの送信をDiscordサーバーに通知するには、以下の手順で設定します：
+
+1. **Discord Webhookの作成**
+   - Discordサーバーの設定を開く
+   - 「連携サービス」→「ウェブフック」→「新しいウェブフック」をクリック
+   - 名前を設定（例：IIDX HOTOKE ARENA お問い合わせ）
+   - 通知を送信するチャンネルを選択
+   - 「ウェブフックURLをコピー」をクリック
+
+2. **環境変数の設定**
+   - `.env.example` を `.env` にコピー
+   - `VITE_DISCORD_WEBHOOK_URL` にコピーしたWebhook URLを設定
+
+```bash
+# .env
+VITE_DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+```
+
+3. **Vercelでの環境変数設定**
+   - Vercelダッシュボードのプロジェクト設定を開く
+   - 「Settings」→「Environment Variables」
+   - `VITE_DISCORD_WEBHOOK_URL` を追加し、Webhook URLを設定
+   - 再デプロイを実行
 
 ## デプロイ
 

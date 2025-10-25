@@ -21,15 +21,82 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      const webhookUrl = import.meta.env.VITE_DISCORD_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        console.error('Discord Webhook URL is not configured');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // カテゴリの日本語変換
+      const categoryMap: { [key: string]: string } = {
+        general: '一般的なお問い合わせ',
+        participation: 'イベント参加について',
+        other: 'その他',
+      };
+
+      // Discord Embed形式でメッセージを構築
+      const embed = {
+        title: '📩 新しいお問い合わせ',
+        color: 0x4A6FA5, // iidx-blue
+        fields: [
+          {
+            name: 'ハンドルネーム',
+            value: formData.handleName,
+            inline: true,
+          },
+          {
+            name: '所属団体',
+            value: formData.organization === 'BBD' ? 'BBD（早稲田大学）' : 'KBM（慶應義塾大学）',
+            inline: true,
+          },
+          {
+            name: '期生・OBOG',
+            value: formData.generation,
+            inline: true,
+          },
+          {
+            name: 'メールアドレス',
+            value: formData.email,
+            inline: false,
+          },
+          {
+            name: 'お問い合わせ種類',
+            value: categoryMap[formData.category] || formData.category,
+            inline: false,
+          },
+          {
+            name: '件名',
+            value: formData.subject,
+            inline: false,
+          },
+          {
+            name: 'お問い合わせ内容',
+            value: formData.message,
+            inline: false,
+          },
+        ],
+        timestamp: new Date().toISOString(),
+        footer: {
+          text: 'IIDX HOTOKE ARENA SEASON2',
+        },
+      };
+
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          username: 'IIDX HOTOKE ARENA お問い合わせ',
+          avatar_url: 'https://i.imgur.com/4M34hi2.png', // オプション: アイコン画像URL
+          embeds: [embed],
+        }),
       });
 
-      if (response.ok) {
+      if (response.ok || response.status === 204) {
         setSubmitStatus('success');
         setFormData({
           handleName: '',
@@ -45,6 +112,7 @@ export default function ContactPage() {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Error sending to Discord:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
