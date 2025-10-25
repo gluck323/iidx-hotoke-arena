@@ -374,7 +374,7 @@ export default function HomePage() {
               多幸感を、全身で。
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-              好きな曲を筐体の良い音響で流し合う、
+              好きな曲を筐体の良い音響で流し合う
               <br />
               Awesomeイベントに参加しませんか？
             </p>
