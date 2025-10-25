@@ -69,26 +69,30 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 space-y-4 border-t border-white/10">
-            <Link
-              to="/about"
-              onClick={() => setIsMenuOpen(false)}
-              className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-2"
-            >
-              イベント概要
-            </Link>
-            <Link
-              to="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-2"
-            >
-              お問い合わせ
-            </Link>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full" size="sm">
-                参加はこちら
-              </Button>
-            </Link>
+          <nav className="md:hidden py-4 border-t border-white/10">
+            <div className="space-y-2">
+              <Link
+                to="/about"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-3"
+              >
+                イベント概要
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-3"
+              >
+                お問い合わせ
+              </Link>
+              <div className="pt-2">
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block">
+                  <Button className="w-full" size="sm">
+                    参加はこちら
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </nav>
         )}
       </Container>
