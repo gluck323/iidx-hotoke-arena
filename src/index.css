@@ -18,7 +18,7 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(to right, #34495E, #4A6FA5, #B89968);
+    background: linear-gradient(to right, #FFFFFF, #DC143C, #FFFFFF);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32,11 +32,11 @@
     @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
 
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(74, 111, 165, 0.3);
+  .glow-red {
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
   }
 
-  .glow-magenta {
-    box-shadow: 0 0 20px rgba(139, 90, 125, 0.3);
+  .glow-white {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   }
 }

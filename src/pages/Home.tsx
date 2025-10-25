@@ -41,7 +41,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-iidx-black relative overflow-hidden">
       {/* 仏像背景 - 固定 */}
       <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-0">
         <img
@@ -143,31 +143,28 @@ export default function HomePage() {
       </div>
 
       {/* ヒーローセクション */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
 
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container mx-auto px-4 py-4 md:py-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-4 md:mb-6 text-gradient leading-tight">
-              IIDX HOTOKE ARENA
-            </h1>
-            <p className="text-2xl sm:text-3xl md:text-4xl text-gray-300 mb-4 font-display font-bold tracking-wider">
-              SEASON 2
-            </p>
-            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-classic-slate via-iidx-blue to-classic-slate mx-auto mb-8 md:mb-12"></div>
+            <div className="mb-2 sm:mb-3 md:mb-6 flex justify-center">
+              <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
+            </div>
+            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto mb-4 sm:mb-6 md:mb-12"></div>
 
             {/* イベント告知バナー */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="bg-gradient-to-r from-classic-brown/20 to-iidx-gold/20 backdrop-blur-sm border-2 border-iidx-gold/40 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 md:mb-12 max-w-4xl mx-auto"
+              className="bg-black/80 backdrop-blur-sm border-2 border-iidx-red/60 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 md:mb-12 max-w-4xl mx-auto"
             >
-              <div className="text-iidx-gold text-xs sm:text-sm font-bold mb-2">次回開催予定</div>
+              <div className="text-white text-xs sm:text-sm font-bold mb-2">次回開催予定</div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">
                 2026年2月下旬
               </h2>
@@ -183,8 +180,8 @@ export default function HomePage() {
                   { value: countdown.minutes, label: '分' },
                   { value: countdown.seconds, label: '秒' },
                 ].map((item, index) => (
-                  <div key={index} className="bg-gray-900/50 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-gray-700">
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-iidx-gold">{item.value}</div>
+                  <div key={index} className="bg-black/50 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-white/20">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">{item.value}</div>
                     <div className="text-xs sm:text-sm text-gray-400">{item.label}</div>
                   </div>
                 ))}
@@ -192,7 +189,7 @@ export default function HomePage() {
 
               <Link
                 to="/contact"
-                className="inline-block bg-gradient-to-r from-iidx-gold to-classic-brown hover:from-iidx-gold/90 hover:to-classic-brown/90 text-white font-bold py-3 sm:py-4 md:py-5 px-8 sm:px-10 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-base sm:text-lg md:text-xl border-2 border-iidx-gold/50 hover:border-iidx-gold animate-pulse hover:animate-none"
+                className="inline-block bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red text-white font-bold py-3 sm:py-4 md:py-5 px-8 sm:px-10 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-base sm:text-lg md:text-xl border-2 border-iidx-red/50 hover:border-iidx-red animate-pulse hover:animate-none"
               >
                 参加はこちら
               </Link>
@@ -207,13 +204,13 @@ export default function HomePage() {
             >
               <Link
                 to="/about"
-                className="bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base"
+                className="bg-black/40 border border-iidx-red/60 hover:border-iidx-red text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-iidx-red/30 text-sm sm:text-base"
               >
                 イベント概要
               </Link>
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-classic-navy to-iidx-magenta hover:from-classic-navy/80 hover:to-iidx-magenta/80 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base"
+                className="bg-black/40 border border-iidx-red/60 hover:border-iidx-red text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-iidx-red/30 text-sm sm:text-base"
               >
                 お問い合わせ
               </Link>
@@ -257,25 +254,25 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               イベント詳細
             </h2>
-            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-classic-slate to-iidx-blue mx-auto"></div>
+            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto"></div>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
             {[
               {
                 icon: (
-                  <svg className="w-12 h-12 text-iidx-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 ),
                 title: '開催時期',
                 description: '2026年2月下旬',
                 detail: '詳細日時は決定次第お知らせします',
-                borderColor: 'border-iidx-blue/30',
+                borderColor: 'border-white/20',
               },
               {
                 icon: (
-                  <svg className="w-12 h-12 text-iidx-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -286,17 +283,17 @@ export default function HomePage() {
                     href="https://maps.app.goo.gl/PMjT4ftyPpeXx7vD9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-iidx-magenta hover:text-iidx-blue transition-colors underline"
+                    className="text-white hover:text-iidx-red-light transition-colors underline"
                   >
                     イミグランデ日吉店
                   </a>
                 ),
                 detail: '一部スペース貸し切り予定',
-                borderColor: 'border-iidx-magenta/30',
+                borderColor: 'border-white/20',
               },
               {
                 icon: (
-                  <svg className="w-12 h-12 text-classic-slate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                   </svg>
                 ),
@@ -307,11 +304,11 @@ export default function HomePage() {
                   </div>
                 ),
                 detail: '',
-                borderColor: 'border-classic-slate/30',
+                borderColor: 'border-white/20',
               },
               {
                 icon: (
-                  <svg className="w-12 h-12 text-iidx-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -319,29 +316,29 @@ export default function HomePage() {
                 title: 'イベント形式',
                 description: '4台同時再生',
                 detail: '仏曲を仏音響で',
-                borderColor: 'border-iidx-gold/30',
+                borderColor: 'border-white/20',
               },
               {
                 icon: (
-                  <svg className="w-12 h-12 text-classic-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 ),
                 title: '参加者',
                 description: 'アンケート実施中',
                 detail: '前回は総勢40名程度',
-                borderColor: 'border-classic-navy/30',
+                borderColor: 'border-white/20',
               },
               {
                 icon: (
-                  <svg className="w-12 h-12 text-classic-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-iidx-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                   </svg>
                 ),
                 title: 'プレゼント',
                 description: 'お菓子等を予定',
                 detail: '得票数1位の受賞者に贈呈',
-                borderColor: 'border-classic-brown/30',
+                borderColor: 'border-white/20',
               },
             ].map((item, index) => (
               <motion.div
@@ -350,7 +347,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className={`bg-gray-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border ${item.borderColor} hover:border-opacity-50 transition-all`}
+                className={`bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border ${item.borderColor} hover:border-white/40 transition-all`}
               >
                 <div className="mb-3 sm:mb-4">{item.icon}</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
@@ -366,18 +363,18 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-classic-navy/30 to-iidx-blue/20 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-iidx-blue/30 text-center"
+            className="bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-iidx-red/60 text-center"
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               主催情報
             </h3>
             <div className="text-gray-300 space-y-2">
               <p className="text-sm sm:text-base md:text-lg">
-                <span className="text-iidx-blue font-bold">主催：</span>
+                <span className="text-white font-bold">主催：</span>
                 KBD IIDX HOTOKE ARENA製作委員会
               </p>
               <p className="text-sm sm:text-base md:text-lg">
-                <span className="text-iidx-magenta font-bold">企画・原案：</span>
+                <span className="text-white font-bold">企画・原案：</span>
                 みりん
               </p>
             </div>
@@ -395,7 +392,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8">
-              全身で多幸感を享受しよう
+              多幸感を、全身で。
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
               好きな曲を筐体の良い音響で流し合う、
@@ -405,13 +402,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <Link
                 to="/about"
-                className="inline-block bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base md:text-lg"
+                className="inline-block bg-gray-800 border border-white/20 hover:bg-gray-700 hover:border-white/40 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base md:text-lg"
               >
                 イベント概要を見る
               </Link>
               <Link
                 to="/contact"
-                className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 text-sm sm:text-base md:text-lg"
+                className="inline-block bg-gray-800 border border-white/20 hover:bg-gray-700 hover:border-white/40 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 text-sm sm:text-base md:text-lg"
               >
                 お問い合わせ
               </Link>

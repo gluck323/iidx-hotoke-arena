@@ -7,17 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Classic desaturated color palette
-        'iidx-black': '#0A0A0A',
+        // SEASON2 poster inspired color palette
+        'iidx-black': '#000000',       // Pure black background
         'iidx-gray-dark': '#1A1A1A',
         'iidx-gray': '#2A2A2A',
-        'iidx-blue': '#4A6FA5',        // Desaturated blue
-        'iidx-magenta': '#8B5A7D',     // Desaturated magenta/purple
-        'iidx-gold': '#B89968',        // Desaturated gold
+        'iidx-red': '#DC143C',         // Crimson red (main accent)
+        'iidx-red-light': '#FF6B6B',   // Lighter red for hover states
+        'iidx-red-dark': '#B22222',    // Darker red
+        'iidx-gold': '#FFD700',        // Gold for special highlights
         'iidx-text-gray': '#A0A0A0',
-        'classic-navy': '#2C3E50',     // Classic navy
-        'classic-slate': '#34495E',    // Classic slate
-        'classic-brown': '#6B5D53',    // Classic brown
+        'classic-slate': '#34495E',    // Keep for subtle elements
       },
       fontFamily: {
         'display': ['Orbitron', 'sans-serif'],

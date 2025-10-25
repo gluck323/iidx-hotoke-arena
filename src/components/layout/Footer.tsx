@@ -27,7 +27,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/about"
-                  className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
+                  className="text-iidx-text-gray hover:text-iidx-red transition-colors"
                 >
                   イベント概要
                 </a>
@@ -35,7 +35,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/contact"
-                  className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
+                  className="text-iidx-text-gray hover:text-iidx-red transition-colors"
                 >
                   お問い合わせ
                 </a>
@@ -56,7 +56,7 @@ const Footer = () => {
               {/* Discord icon placeholder */}
               <a
                 href="#"
-                className="text-iidx-text-gray hover:text-iidx-blue transition-colors"
+                className="text-iidx-text-gray hover:text-iidx-red transition-colors"
                 aria-label="Discord"
               >
                 <svg

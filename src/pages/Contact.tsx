@@ -40,7 +40,7 @@ export default function ContactPage() {
       // Discord Embed形式でメッセージを構築
       const embed = {
         title: '📩 新しいお問い合わせ',
-        color: 0x4A6FA5, // iidx-blue
+        color: 0xDC143C, // iidx-red
         fields: [
           {
             name: 'ハンドルネーム',
@@ -90,7 +90,7 @@ export default function ContactPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          username: 'IIDX HOTOKE ARENA お問い合わせ',
+          username: '公式サイトお問い合わせ',
           avatar_url: 'https://i.imgur.com/4M34hi2.png', // オプション: アイコン画像URL
           embeds: [embed],
         }),
@@ -130,7 +130,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-iidx-black">
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         {/* ヘッダー */}
         <motion.div
@@ -144,7 +144,7 @@ export default function ContactPage() {
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 sm:mb-6">
             ご質問・ご要望はこちらからお気軽にどうぞ
           </p>
-          <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-classic-slate to-iidx-blue mx-auto"></div>
+          <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -156,40 +156,40 @@ export default function ContactPage() {
             className="lg:col-span-1"
           >
             {/* お問い合わせ内容 */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border border-iidx-blue/30 mb-4 sm:mb-6">
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border border-white/20 mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 md:mb-4">
                 お問い合わせ内容
               </h2>
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-iidx-blue mr-2">•</span>
+                  <span className="text-white mr-2">•</span>
                   <span>イベント参加方法について</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-iidx-magenta mr-2">•</span>
+                  <span className="text-white mr-2">•</span>
                   <span>イベント内容に関する質問</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-classic-slate mr-2">•</span>
+                  <span className="text-white mr-2">•</span>
                   <span>その他ご質問・ご要望</span>
                 </li>
               </ul>
             </div>
 
             {/* 連絡先情報 */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border border-iidx-magenta/30 mb-4 sm:mb-6">
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border border-white/20 mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 md:mb-4">
                 その他の連絡方法
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-300">
                 <div>
-                  <h3 className="font-bold text-iidx-blue mb-1 sm:mb-2 text-sm sm:text-base">Discord</h3>
+                  <h3 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Discord</h3>
                   <p className="text-xs sm:text-sm">
                     コミュニティサーバーで直接質問も可能です
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-iidx-magenta mb-1 sm:mb-2 text-sm sm:text-base">Twitter/X</h3>
+                  <h3 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Twitter/X</h3>
                   <p className="text-xs sm:text-sm">
                     最新情報はSNSでも発信中
                   </p>
@@ -205,7 +205,7 @@ export default function ContactPage() {
             transition={{ delay: 0.3 }}
             className="lg:col-span-2"
           >
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-classic-slate/30">
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20">
               {submitStatus === 'success' ? (
                 <div className="text-center py-8 sm:py-12">
                   <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">✓</div>
@@ -219,7 +219,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
-                    className="bg-classic-slate hover:bg-iidx-blue text-white font-bold py-2 sm:py-3 px-5 sm:px-6 rounded-lg transition-colors text-sm sm:text-base"
+                    className="bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red text-white font-bold py-2 sm:py-3 px-5 sm:px-6 rounded-lg transition-all shadow-lg shadow-iidx-red/50 border border-iidx-red/50 text-sm sm:text-base"
                   >
                     新しいお問い合わせを送る
                   </button>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                       value={formData.handleName}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                       placeholder="あなたのハンドルネーム"
                     />
                   </div>
@@ -255,7 +255,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -271,7 +271,7 @@ export default function ContactPage() {
                       value={formData.organization}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                     >
                       <option value="BBD">BBD（早稲田大学）</option>
                       <option value="KBM">KBM（慶應義塾大学）</option>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                       value={formData.generation}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                       placeholder="例: 16期 または OBOG"
                     />
                   </div>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                       value={formData.category}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                     >
                       <option value="general">一般的なお問い合わせ</option>
                       <option value="participation">イベント参加について</option>
@@ -326,7 +326,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50"
                       placeholder="イベント参加方法について"
                     />
                   </div>
@@ -343,7 +343,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={8}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-blue focus:outline-none focus:ring-2 focus:ring-iidx-blue/50 resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/50 border border-gray-700 rounded-lg text-white text-sm sm:text-base focus:border-iidx-red focus:outline-none focus:ring-2 focus:ring-iidx-red/50 resize-none"
                       placeholder="お問い合わせ内容を詳しくご記入ください"
                     />
                   </div>
@@ -375,7 +375,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting || !formData.agreeToTerms}
-                    className="w-full bg-gradient-to-r from-classic-slate to-iidx-blue hover:from-classic-slate/80 hover:to-iidx-blue/80 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all transform hover:scale-105 disabled:transform-none shadow-lg text-sm sm:text-base"
+                    className="w-full bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all transform hover:scale-105 disabled:transform-none shadow-lg text-sm sm:text-base"
                   >
                     {isSubmitting ? '送信中...' : '送信する'}
                   </button>
@@ -412,14 +412,14 @@ export default function ContactPage() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 border border-gray-700"
+                className="bg-black/40 backdrop-blur-sm rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 border border-white/20"
               >
                 <h3 className="text-base sm:text-lg font-bold text-white mb-2 flex items-start">
-                  <span className="text-iidx-blue mr-2 flex-shrink-0">Q.</span>
+                  <span className="text-white mr-2 flex-shrink-0">Q.</span>
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 ml-6 sm:ml-6">
-                  <span className="text-iidx-magenta mr-2">A.</span>
+                  <span className="text-white mr-2">A.</span>
                   {faq.a}
                 </p>
               </div>

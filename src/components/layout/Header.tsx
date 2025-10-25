@@ -21,18 +21,18 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/about"
-              className="text-white hover:text-iidx-blue transition-colors"
+              className="text-white hover:text-iidx-red transition-colors"
             >
               イベント概要
             </Link>
             <Link
               to="/contact"
-              className="text-white hover:text-iidx-blue transition-colors"
+              className="text-white hover:text-iidx-red transition-colors"
             >
               お問い合わせ
             </Link>
             <Link to="/contact">
-              <Button size="sm">参加はこちら</Button>
+              <Button size="sm" className="shadow-lg shadow-iidx-red/50 border border-iidx-red/50">参加はこちら</Button>
             </Link>
           </nav>
 
@@ -74,20 +74,20 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-3"
+                className="block w-full text-left text-white hover:text-iidx-red transition-colors py-3"
               >
                 イベント概要
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left text-white hover:text-iidx-blue transition-colors py-3"
+                className="block w-full text-left text-white hover:text-iidx-red transition-colors py-3"
               >
                 お問い合わせ
               </Link>
               <div className="pt-2">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block">
-                  <Button className="w-full" size="sm">
+                  <Button className="w-full shadow-lg shadow-iidx-red/50 border border-iidx-red/50" size="sm">
                     参加はこちら
                   </Button>
                 </Link>
