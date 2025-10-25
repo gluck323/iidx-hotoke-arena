@@ -155,7 +155,7 @@ export default function HomePage() {
             <div className="mb-4 sm:mb-5 md:mb-6 flex justify-center">
               <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
             </div>
-            <div className="w-40 sm:w-48 h-0.5 sm:h-1 md:h-2 bg-gradient-to-r from-transparent via-iidx-red to-transparent mx-auto mb-4 sm:mb-5 md:mb-12 opacity-80"></div>
+            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto mb-4 sm:mb-5 md:mb-12"></div>
 
             {/* イベント告知バナー */}
             <motion.div
