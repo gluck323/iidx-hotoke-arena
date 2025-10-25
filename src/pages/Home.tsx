@@ -152,10 +152,10 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="mb-2 sm:mb-3 md:mb-6 flex justify-center">
+            <div className="mb-3 sm:mb-4 md:mb-6 flex justify-center">
               <img src="/Logo.png" alt="IIDX HOTOKE ARENA SEASON 2" className="w-full max-w-md sm:max-w-2xl md:max-w-4xl h-auto" />
             </div>
-            <div className="w-32 sm:w-48 h-1 sm:h-2 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto mb-2 sm:mb-3 md:mb-12"></div>
+            <div className="w-40 sm:w-48 h-0.5 sm:h-1 md:h-2 bg-gradient-to-r from-transparent via-iidx-red to-transparent mx-auto mb-3 sm:mb-4 md:mb-12 opacity-80"></div>
 
             {/* イベント告知バナー */}
             <motion.div
