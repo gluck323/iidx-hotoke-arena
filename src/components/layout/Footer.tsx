@@ -47,11 +47,8 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-white font-semibold mb-4">主催</h4>
-            <p className="text-iidx-text-gray text-sm mb-2">
-              早稲田大学音ゲーサークル BBD
-            </p>
             <p className="text-iidx-text-gray text-sm mb-4">
-              慶應義塾大学音ゲーサークル KBM
+              KBD IIDX HOTOKE ARENA製作委員会
             </p>
             <div className="flex space-x-4">
               {/* Discord icon placeholder */}
