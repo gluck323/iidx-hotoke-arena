@@ -20,7 +20,7 @@ export default function AboutPage() {
           className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4">
-            IIDX仏アリーナとは
+            WHAT IS "仏アリーナ"
           </h1>
           <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto"></div>
         </motion.div>
