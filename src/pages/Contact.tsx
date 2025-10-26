@@ -409,6 +409,10 @@ export default function ContactPage() {
                 q: '初心者でも参加できますか？',
                 a: 'もちろんです！beatmaniaIIDXをプレイされている方なら、レベルに関係なくどなたでも歓迎します。',
               },
+              {
+                q: 'OB・OGでも参加できますか？',
+                a: 'もちろん参加できます！現役生・OB・OG問わず、beatmaniaIIDXを楽しむすべての方を大歓迎しています。ぜひ一緒に多幸感を味わいましょう！',
+              },
             ].map((faq, index) => (
               <div
                 key={index}
