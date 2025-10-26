@@ -413,6 +413,10 @@ export default function ContactPage() {
                 q: 'OB・OGでも参加できますか？',
                 a: 'もちろん参加できます！OB・OG・5鍵時代からの翁を問わず、すべてのKBDを大歓迎しています。',
               },
+              {
+                q: 'ダーティ締めですか？',
+                a: 'はい。',
+              },
             ].map((faq, index) => (
               <div
                 key={index}
