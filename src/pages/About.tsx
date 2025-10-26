@@ -19,7 +19,7 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-5 md:mb-6">
             WHAT IS "仏アリーナ"
           </h1>
           <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-iidx-red via-white to-iidx-red mx-auto"></div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                起源
+                オリジン
               </h2>
             </div>
             <div className="text-gray-300 text-sm sm:text-base leading-relaxed bg-black/30 rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 border-l-4 border-iidx-red/50">
