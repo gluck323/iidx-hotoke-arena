@@ -411,7 +411,7 @@ export default function ContactPage() {
               },
               {
                 q: 'OB・OGでも参加できますか？',
-                a: 'もちろん参加できます！現役生・OB・OG問わず、beatmaniaIIDXを楽しむすべての方を大歓迎しています。ぜひ一緒に多幸感を味わいましょう！',
+                a: 'もちろん参加できます！現役生・OB・OG・5鍵時代のプレイヤー問わず、beatmaniaIIDXを楽しむすべてのKBDを大歓迎しています。',
               },
             ].map((faq, index) => (
               <div
