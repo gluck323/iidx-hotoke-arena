@@ -169,7 +169,7 @@ export default function HomePage() {
                 2026年2月下旬
               </h2>
               <p className="text-[11px] sm:text-sm md:text-base text-gray-300 mb-2.5 sm:mb-4 md:mb-6">
-                詳細日時は未定 | 参加希望アンケート受付中
+                詳細日時は未定 | 参加希望アンケート開催予定 2025/2/7
               </p>
 
               {/* カウントダウン */}

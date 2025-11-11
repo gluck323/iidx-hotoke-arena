@@ -185,7 +185,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Discord</h3>
                   <p className="text-xs sm:text-sm">
-                    運営のDMに直接の質問も可能です
+                    運営のDMに直接質問も可能です
                   </p>
                 </div>
                 <div>
