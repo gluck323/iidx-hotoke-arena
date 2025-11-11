@@ -43,7 +43,7 @@ export default function AboutPage() {
             </div>
             <div className="text-gray-300 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
               <p>
-                <strong className="text-white">IIDX HOTOKE ARENA SEASON2</strong>は、beatmaniaIIDXプレイヤーが集まり、好きな曲を筐体の良い音響で流し合う音楽イベントです。
+                <strong className="text-white">IIDX HOTOKE ARENA S2</strong>は、beatmaniaIIDXプレイヤーが集まり、好きな曲を筐体の良い音響で流し合う音楽イベントです。
               </p>
               <p>
                 スコアで競い合う競技性を重視したイベントではなく、参加者各々が好きな曲をプレイして楽しむエキシビションとしての側面が強いことが特徴です。

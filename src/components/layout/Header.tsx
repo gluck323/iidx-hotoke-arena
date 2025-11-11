@@ -13,7 +13,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <h1 className="text-sm sm:text-base md:text-xl lg:text-2xl font-display font-bold text-gradient leading-tight">
-              IIDX HOTOKE ARENA SEASON2
+              IIDX HOTOKE ARENA S2
             </h1>
           </Link>
 

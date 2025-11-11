@@ -80,7 +80,7 @@ export default function ContactPage() {
         ],
         timestamp: new Date().toISOString(),
         footer: {
-          text: 'IIDX HOTOKE ARENA SEASON2',
+          text: 'IIDX HOTOKE ARENA S2',
         },
       };
 
@@ -156,8 +156,8 @@ export default function ContactPage() {
         >
           <div className="bg-yellow-900/30 border-2 border-yellow-500/60 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8">
             <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 text-center leading-relaxed">
-              これは参加希望のフォームではありません<br />
-              参加希望アンケートは後日開催します
+              <span className="block">これは参加希望のフォームではありません</span>
+              <span className="block">参加希望アンケートは後日開催します</span>
             </p>
           </div>
         </motion.div>
