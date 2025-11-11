@@ -155,10 +155,10 @@ export default function ContactPage() {
           className="max-w-4xl mx-auto mb-6 sm:mb-8"
         >
           <div className="bg-yellow-900/30 border-2 border-yellow-500/60 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8">
-            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 text-center leading-relaxed">
-              <span className="block">これは参加希望のフォームではありません</span>
-              <span className="block">参加希望アンケートは後日開催します</span>
-            </p>
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-yellow-300 text-center space-y-1 sm:space-y-2">
+              <p>これは参加希望のフォームではありません</p>
+              <p>参加希望アンケートは後日開催します</p>
+            </div>
           </div>
         </motion.div>
 
