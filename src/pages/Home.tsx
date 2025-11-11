@@ -304,7 +304,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: '参加者',
-                description: 'アンケート実施中',
+                description: 'アンケート実施予定',
                 detail: '前回は総勢40名程度',
                 borderColor: 'border-white/20',
               },
