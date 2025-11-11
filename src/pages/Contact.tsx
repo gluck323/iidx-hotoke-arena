@@ -155,8 +155,8 @@ export default function ContactPage() {
           className="max-w-4xl mx-auto mb-6 sm:mb-8"
         >
           <div className="bg-yellow-900/30 border-2 border-yellow-500/60 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8">
-            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 text-center">
-              ⚠️ これは参加希望のフォームではありません<br className="sm:hidden" />
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 text-center leading-relaxed">
+              これは参加希望のフォームではありません<br />
               参加希望アンケートは後日開催します
             </p>
           </div>
