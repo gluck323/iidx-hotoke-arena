@@ -126,7 +126,7 @@ export default function AboutPage() {
                   </p>
                   <p className="flex items-start">
                     <span className="text-white mr-2 flex-shrink-0">•</span>
-                    <span>開催時期：2026年2月下旬を想定<span className="inline sm:inline">（詳細日時は未定）</span></span>
+                    <span>開催時期：2026年2月7日<span className="inline sm:inline">（詳細時間は未定）</span></span>
                   </p>
                 </div>
               </div>

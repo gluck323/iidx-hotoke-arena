@@ -12,7 +12,7 @@ export default function HomePage() {
 
   // カウントダウンタイマー
   useEffect(() => {
-    const targetDate = new Date('2026-02-28T00:00:00').getTime();
+    const targetDate = new Date('2026-02-07T00:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -166,10 +166,10 @@ export default function HomePage() {
             >
               <div className="text-white text-[11px] sm:text-sm font-bold mb-1 sm:mb-2">次回開催予定</div>
               <h2 className="text-lg sm:text-2xl md:text-4xl font-bold text-white mb-1.5 sm:mb-3 md:mb-4">
-                2026年2月下旬
+                2026年2月7日
               </h2>
               <p className="text-[11px] sm:text-sm md:text-base text-gray-300 mb-2.5 sm:mb-4 md:mb-6">
-                詳細日時は未定 | 参加希望アンケート開催予定
+                詳細時間は未定 | 参加希望アンケート開催予定
               </p>
 
               {/* カウントダウン */}
@@ -245,8 +245,8 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: '開催時期',
-                description: '2026年2月下旬',
-                detail: '詳細日時は決定次第お知らせします',
+                description: '2026年2月7日',
+                detail: '詳細時間は決定次第お知らせします',
                 borderColor: 'border-white/20',
               },
               {
