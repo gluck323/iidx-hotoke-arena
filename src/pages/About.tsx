@@ -158,7 +158,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">参加人数</h3>
                   <p className="text-sm sm:text-base text-gray-300">
-                    現在、参加希望者のアンケートを実施中です。前回は総勢40名程度の方にご参加いただきました。
+                    現在、参加希望者のアンケートを実施予定です。前回は総勢40名程度の方にご参加いただきました。
                   </p>
                 </div>
               </div>
