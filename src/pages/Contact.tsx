@@ -157,7 +157,7 @@ export default function ContactPage() {
           <div className="bg-yellow-900/30 border-2 border-yellow-500/60 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8">
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-yellow-300 text-center space-y-1 sm:space-y-2">
               <p>これは参加希望のフォームではありません</p>
-              <p>参加希望アンケートは後日開催します</p>
+              <p>参加希望アンケートは後日公開します</p>
             </div>
           </div>
         </motion.div>

@@ -169,7 +169,7 @@ export default function HomePage() {
                 2026年2月7日
               </h2>
               <p className="text-[11px] sm:text-sm md:text-base text-gray-300 mb-2.5 sm:mb-4 md:mb-6">
-                詳細時間は未定 | 参加希望アンケート開催予定
+                詳細時間は未定 | 参加希望アンケート公開予定
               </p>
 
               {/* カウントダウン */}
@@ -246,7 +246,7 @@ export default function HomePage() {
                 ),
                 title: '開催時期',
                 description: '2026年2月7日',
-                detail: '詳細時間は決定次第お知らせします',
+                detail: '詳細は決定次第お知らせします',
                 borderColor: 'border-white/20',
               },
               {
@@ -304,7 +304,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: '参加者',
-                description: 'アンケート実施予定',
+                description: 'アンケート公開予定',
                 detail: '前回は総勢40名程度',
                 borderColor: 'border-white/20',
               },

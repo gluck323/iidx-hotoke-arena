@@ -43,13 +43,13 @@ export default function AboutPage() {
             </div>
             <div className="text-gray-300 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
               <p>
-                <strong className="text-white">IIDX HOTOKE ARENA S2</strong>は、beatmaniaIIDXプレイヤーが集まり、好きな曲を筐体の良い音響で流し合う音楽イベントです。
+                <strong className="text-white">IIDX 仏アリーナ SEASON2</strong>はbeatmaniaIIDXプレイヤーが集まり、好きな曲を筐体の良い音響で流し合う音楽イベントです。
               </p>
               <p>
                 スコアで競い合う競技性を重視したイベントではなく、参加者各々が好きな曲をプレイして楽しむエキシビションとしての側面が強いことが特徴です。
               </p>
               <p>
-                前回の仏アリーナでは総勢40名程度の参加者が集まり、Actを2つに分け開催されました。
+                前回の仏アリーナでは総勢40名程度の参加者が集まりActを2つに分け開催されました。
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">参加人数</h3>
                   <p className="text-sm sm:text-base text-gray-300">
-                    現在、参加希望者のアンケートを実施予定です。前回は総勢40名程度の方にご参加いただきました。
+                    参加希望者のアンケートを実施予定です。前回は総勢40名程度の方にご参加いただきました。
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">どなたでも歓迎</h3>
                   <p className="text-sm sm:text-base text-gray-300">
-                    beatmaniaIIDXをプレイしている方なら、レベルに関係なくどなたでも参加できます。
+                    beatmaniaIIDXをプレイしている方なら腕前に関係なくどなたでも参加できます。
                   </p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">楽しむことが第一</h3>
                   <p className="text-sm sm:text-base text-gray-300">
-                    競技性よりも、好きな曲を良い音響で楽しむことを重視したイベントです。
+                    競技性よりも好きな曲を良い音響で楽しむことを重視したイベントです。
                   </p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function AboutPage() {
                 </svg>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">和やかな雰囲気</h3>
                 <p className="text-sm sm:text-base text-gray-300">
-                  競技性よりも交流を重視した、リラックスした雰囲気です。
+                  競技性よりも交流を重視するリラックスした雰囲気です。
                 </p>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function AboutPage() {
             </div>
             <div className="text-gray-200 space-y-4">
               <p className="text-lg">
-                参加者の投票により、得票数が一番多かった受賞者にプレゼントを贈呈します。
+                参加者の投票により得票数が一番多かった受賞者にプレゼントを贈呈します。
               </p>
               <ul className="space-y-3 ml-6">
                 <li className="flex items-center">
