@@ -185,13 +185,13 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Discord</h3>
                   <p className="text-xs sm:text-sm">
-                    コミュニティサーバーで直接質問も可能です
+                    運営のDMに直接の質問も可能です
                   </p>
                 </div>
                 <div>
                   <h3 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Twitter/X</h3>
                   <p className="text-xs sm:text-sm">
-                    最新情報はSNSでも発信中
+                    最新の情報は各アカウントでも発信中
                   </p>
                 </div>
               </div>
