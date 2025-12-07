@@ -31,9 +31,9 @@ const Header = () => {
             >
               お問い合わせ
             </Link>
-            <Link to="/contact">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9H1xO4eNFwjEOaprUjeEVRNUWXrZaz41gECJmkOHOyTG5Fg/viewform" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="shadow-lg shadow-iidx-red/50 border border-iidx-red/50">参加はこちら</Button>
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -86,11 +86,11 @@ const Header = () => {
                 お問い合わせ
               </Link>
               <div className="pt-2">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9H1xO4eNFwjEOaprUjeEVRNUWXrZaz41gECJmkOHOyTG5Fg/viewform" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block">
                   <Button className="w-full shadow-lg shadow-iidx-red/50 border border-iidx-red/50" size="sm">
                     参加はこちら
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </nav>

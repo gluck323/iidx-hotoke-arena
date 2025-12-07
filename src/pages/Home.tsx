@@ -187,12 +187,14 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc9H1xO4eNFwjEOaprUjeEVRNUWXrZaz41gECJmkOHOyTG5Fg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-iidx-red to-iidx-red-dark hover:from-iidx-red-light hover:to-iidx-red text-white font-bold py-2 sm:py-3 md:py-5 px-6 sm:px-8 md:px-12 rounded-full transition-all transform hover:scale-110 shadow-2xl text-sm sm:text-base md:text-xl border-2 border-iidx-red/50 hover:border-iidx-red animate-pulse hover:animate-none"
               >
                 参加はこちら
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>
